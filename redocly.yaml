@@ -1,18 +1,26 @@
 # See https://redocly.com/docs/cli/configuration/ for more information.
 apis:
   sample@v1: 
-    root: openapi/openapi.yaml
+    root: https://stage-api.azion.com/v4/openapi.yaml
 extends:
   - recommended
 rules:
   no-unused-components: error
 theme:
   openapi:
-    htmlTemplate: ./docs/index.html
     theme:
-      colors:
-        primary:
-          main: "#32329f"
+      sidebar:
+        backgroundColor: '#2e2b29'
+        textColor: '#e35914'
+      rightPanel:
+        textColor: 'ivory'
+        backgroundColor: '#2e2b29'
+      typography:
+        links:
+          color: '#eb6c2d'
+      logo: 
+        maxHeight: 140px
+        maxWidth: 260px
     generateCodeSamples:
       languages:  # Array of language config objects; indicates in which languages to generate code samples.
         - lang: curl
